@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Document</title>
+</head>
+<body>
+    <form>
+        
+        <a href="{% url 'excefile' pk=f.id %}">
+            
+            <h1>Read</h1>
+            
+            {% for row in excel_data %}
+            {% for cell in row %}
+                {{ cell }}&nbsp;&nbsp;
+            {% endfor %}
+            <br>
+        {% endfor %}
+        </a>
+        
+    </form>
+</body>
+</html>
